@@ -1,0 +1,9 @@
+services:
+  mars:
+    build: .
+    container_name: mars-app
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    restart: unless-stopped
